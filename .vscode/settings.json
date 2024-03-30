@@ -1,0 +1,8 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/next_*test": true,
+    "**/next_*test.dSYM": true
+  }
+}
