@@ -37,7 +37,7 @@ pub fn next_release(ver Version, inc Increment) Version {
 }
 
 fn parse_prerelease(prerelease string) (int, int) {
-	dot := prerelease.index_u8_last(`.`)
+	dot := prerelease.last_index_u8(`.`)
 	return if dot < 0 {
 		-1, -1
 	} else if dot == prerelease.len - 1 {
