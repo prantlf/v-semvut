@@ -52,7 +52,7 @@ fn parse_number(s string, from int) int {
 	C.errno = 0
 	n := C.strtoul(unsafe { s.str + from }, &end, 10)
 	return if C.errno == 0 && unsafe { s.str + s.len } == end {
-		n
+		int(n)
 	} else {
 		-1
 	}
